@@ -1,8 +1,8 @@
 {
   "name": "@istanbul/core",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "core package for istanbul framework",
-  "homepage": "https://github.com/ssibrahimbas/istanbul/tree/master/packages/events",
+  "homepage": "https://github.com/istanbulnode/core#readme",
   "keywords": [
     "istanbul",
     "results",
@@ -13,10 +13,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ssibrahimbas/istanbul.git"
+    "url": "https://github.com/istanbulnode/core.git"
   },
   "bugs": {
-    "url": "https://github.com/ssibrahimbas/istanbul/issues"
+    "url": "https://github.com/istanbulnode/core/issues"
   },
   "directories": {
     "lib": "lib",
