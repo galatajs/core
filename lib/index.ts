@@ -6,3 +6,4 @@
 
 export * from "./errors";
 export * from "./results";
+export * from "./set/unique.set";
