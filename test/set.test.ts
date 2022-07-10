@@ -15,6 +15,19 @@ describe("UniqueSet tests", () => {
   it("should throw an error if the value already exists", () => {
     const set = new UniqueSet<string>();
     set.add("a");
-    expect(() => set.add("a")).toThrowError(/Value a already exists/);
+    expect(() => set.add("a")).toThrowError(/Value 'a' already exists/);
+  });
+
+  it("should throw an error if the value already exists", () => {
+    type Product = {
+      name: string;
+      price: number;
+    };
+    const set = new UniqueSet<Product>();
+    const product = { name: "a", price: 3 };
+    set.add(product);
+    expect(() => set.add(product)).toThrowError(
+      'Value \'{"name":"a","price":3}\' already exists'
+    );
   });
 });
