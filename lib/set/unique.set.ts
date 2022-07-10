@@ -13,7 +13,11 @@ export class UniqueSet<T> extends Set<T> {
    */
   add(value: T): this {
     if (this.has(value)) {
-      throw new Error(`Value ${value} already exists`);
+      throw new Error(
+        `Value '${
+          typeof value === "object" ? JSON.stringify(value) : value
+        }' already exists`
+      );
     }
     super.add(value);
     return this;
