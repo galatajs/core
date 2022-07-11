@@ -1,6 +1,6 @@
 {
   "name": "@istanbul/core",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "core package for istanbul framework",
   "homepage": "https://github.com/istanbulnode/core#readme",
   "keywords": [
