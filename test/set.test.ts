@@ -1,4 +1,4 @@
-import { UniqueSet } from "../lib";
+import { ReadonlySet, UniqueSet } from "../lib";
 
 describe("UniqueSet tests", () => {
   it("should add a value to the set if it does not already exist", () => {
@@ -29,5 +29,17 @@ describe("UniqueSet tests", () => {
     expect(() => set.add(product)).toThrowError(
       'Value \'{"name":"a","price":3}\' already exists'
     );
+  });
+});
+
+describe("ReadonlySet tests", () => {
+  it("create readonly set", () => {
+    const set = new ReadonlySet<string>();
+    expect(set).toBeInstanceOf(ReadonlySet);
+  });
+
+  it("handle error on readonly set add method called", () => {
+    const map = new ReadonlySet<string>();
+    expect(() => map.add("a")).toThrowError(/Cannot add to a readonly set/);
   });
 });
